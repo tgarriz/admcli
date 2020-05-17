@@ -1,0 +1,29 @@
+easy_admin:
+    site_name: Administrador
+    design:
+        menu:
+          - { route: 'easyadmin', label: 'Inicio', icon: 'home' }
+          - { entity: 'Cliente', label: 'Clientes', icon: 'user-friends' }
+          - { entity: 'Factura', label: 'Facturas', icon: 'sticky-note' }
+          - { entity: 'Plan', label: 'Planes', icon: 'product-hunt' }
+    formats:
+        date:   'd/m/Y'
+    entities:
+        # List the entity class name you want to manage
+        Cliente:
+          class: App\Entity\Cliente
+          list:
+            fields: ['id', 'nombre', 'direccion', 'celular', { property: 'mail', type: 'email' }, plan]
+        Factura:
+          class: App\Entity\Factura
+          list:
+            fields:
+              - id 
+              - fechaGenerada
+              - fechaVencimiento
+              - valor
+              - { property: pagada , type: boolean }
+              - fechaDePago
+
+        Plan:
+          class: App\Entity\Plan
