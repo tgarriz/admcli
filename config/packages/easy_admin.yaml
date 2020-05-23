@@ -5,7 +5,7 @@ easy_admin:
           - { route: 'easyadmin', label: 'Inicio', icon: 'home' }
           - { entity: 'Cliente', label: 'Clientes', icon: 'user-friends' }
           - { entity: 'Factura', label: 'Facturas', icon: 'sticky-note' }
-          - { entity: 'Plan', label: 'Planes', icon: 'product-hunt' }
+          - { entity: 'Plan', label: 'Planes', icon: 'atlas' }
     formats:
         date:   'd/m/Y'
     entities:
@@ -27,3 +27,5 @@ easy_admin:
 
         Plan:
           class: App\Entity\Plan
+          new:
+            fields: ['descripcion','valor']
