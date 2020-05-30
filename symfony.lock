@@ -94,6 +94,9 @@
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "mercadopago/dx-php": {
+        "version": "2.0.0"
+    },
     "monolog/monolog": {
         "version": "2.0.2"
     },

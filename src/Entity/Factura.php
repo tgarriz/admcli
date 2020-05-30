@@ -145,4 +145,14 @@ class Factura
     {
         return (string)$this->id;
     }
+
+    public function configuraFactura(?Cliente $cliente, ?datetime $fechaGen, ?datetime $fechaVenc)
+    {
+        $this->cliente = $cliente;
+        $this->fechaGenerada = $fechaGen;
+        $this->fechaVencimiento = $fechaVenc;
+        $this->valor = $cliente->getPlan()->getValor();
+        $this->pagada = false;
+        $this->mp = $this->id;
+    }
 }
