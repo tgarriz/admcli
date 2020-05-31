@@ -54,6 +54,11 @@ class Cliente
      */
     private $facturas;
 
+    /**
+     * @ORM\Column(type="string", length=8)
+     */
+    private $dni;
+
     public function __construct()
     {
         $this->facturas = new ArrayCollection();
@@ -170,5 +175,17 @@ class Cliente
     public function __toString()
     {
         return $this->apellido . ", " . $this->nombre;
+    }
+
+    public function getDni(): ?string
+    {
+        return $this->dni;
+    }
+
+    public function setDni(string $dni): self
+    {
+        $this->dni = $dni;
+
+        return $this;
     }
 }
