@@ -13,9 +13,9 @@ easy_admin:
         Cliente:
           class: App\Entity\Cliente
           list:
-            fields: ['id', 'nombre', 'direccion', 'celular', { property: 'mail', type: 'email' }, plan]
+            fields: ['id', 'nombre', 'direccion', 'dni','celular', { property: 'mail', type: 'email' }, plan]
           new:
-            fields: ['nombre', 'apellido', 'direccion', 'celular', { property: 'mail', type: 'email' }, plan]
+            fields: ['nombre', 'apellido', 'direccion', 'dni','celular', { property: 'mail', type: 'email' }, plan]
         Factura:
           class: App\Entity\Factura
           list:
