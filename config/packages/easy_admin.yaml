@@ -6,6 +6,7 @@ easy_admin:
           - { entity: 'Cliente', label: 'Clientes', icon: 'user-friends' }
           - { entity: 'Factura', label: 'Facturas', icon: 'sticky-note' }
           - { entity: 'Plan', label: 'Planes', icon: 'atlas' }
+          - { entity: 'Notificacion', label: 'Notificaciones', icon: 'atlas' }
     formats:
         date:   'd/m/Y'
     entities:
@@ -26,8 +27,11 @@ easy_admin:
               - valor
               - { property: pagada , type: boolean }
               - fechaDePago
-
         Plan:
           class: App\Entity\Plan
           new:
             fields: ['descripcion','valor']
+        Notificacion:
+          class: App\Entity\Notificacion
+          list:
+            fields: ['id', 'nid', 'topic', 'time']
