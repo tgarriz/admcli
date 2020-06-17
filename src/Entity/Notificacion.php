@@ -32,6 +32,11 @@ class Notificacion
      */
     private $time;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $er;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Notificacion
     public function setTime(\DateTimeInterface $time): self
     {
         $this->time = $time;
+
+        return $this;
+    }
+
+    public function getEr(): ?string
+    {
+        return $this->er;
+    }
+
+    public function setEr(?string $er): self
+    {
+        $this->er = $er;
 
         return $this;
     }

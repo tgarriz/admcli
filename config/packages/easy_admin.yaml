@@ -27,6 +27,7 @@ easy_admin:
               - valor
               - { property: pagada , type: boolean }
               - fechaDePago
+              - mp
         Plan:
           class: App\Entity\Plan
           new:
